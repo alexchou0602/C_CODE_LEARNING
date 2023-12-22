@@ -1,2 +1,10 @@
 ﻿  test_1.c
+D:\C学习\C_CODE_LEARNING\test_20231222\test_20231222\test_1.c(65,8): warning C4477: “scanf”: 格式字符串“%d”需要类型“int *”的参数，但可变参数 1 拥有了类型“__int64 *”
+D:\C学习\C_CODE_LEARNING\test_20231222\test_20231222\test_1.c(65,8): message : 请考虑在格式字符串中使用“%lld”
+D:\C学习\C_CODE_LEARNING\test_20231222\test_20231222\test_1.c(65,8): message : 请考虑在格式字符串中使用“%I64d”
+D:\C学习\C_CODE_LEARNING\test_20231222\test_20231222\test_1.c(65,8): warning C4477: “scanf”: 格式字符串“%d”需要类型“int *”的参数，但可变参数 2 拥有了类型“__int64 *”
+D:\C学习\C_CODE_LEARNING\test_20231222\test_20231222\test_1.c(65,8): message : 请考虑在格式字符串中使用“%lld”
+D:\C学习\C_CODE_LEARNING\test_20231222\test_20231222\test_1.c(65,8): message : 请考虑在格式字符串中使用“%I64d”
+D:\C学习\C_CODE_LEARNING\test_20231222\test_20231222\test_1.c(68,10): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+D:\C学习\C_CODE_LEARNING\test_20231222\test_20231222\test_1.c(81,11): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
   test_20231222.vcxproj -> D:\C学习\C_CODE_LEARNING\test_20231222\Debug\test_20231222.exe
