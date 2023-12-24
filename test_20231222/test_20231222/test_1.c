@@ -122,24 +122,85 @@
 //}
 
 //输入一个整数计算是几位数(理解复合赋值）
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int n = 0;
+//	printf("请输入一个整数：");
+//	scanf("%d", &a);
+//	printf("您输入的整数是%d。\n", a);
+//
+//	n++;
+//	b=a / 10;
+//	while (b>0)
+//	{
+//		n++;
+//		b /= 10;
+//	}
+//	printf("这个整数是%d位数。\n", n);
+//
+//
+//	return 0;
+//}
+
+////输入一个整数计算是几位数(使用do while，while结尾需要加:）
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int n = 0;
+//	printf("请输入一个整数：");
+//	scanf("%d", &a);
+//	printf("您输入的整数是%d。\n", a);
+//
+//	b = a;
+//	do
+//	{
+//		n++;
+//		b/= 10;
+//	} while (b > 0);
+//	
+//	printf("这个整数是%d位数。\n", n);
+//
+//
+//	return 0;
+//}
+
+//一个猜数的游戏
+
+#include<stdlib.h>
+#include<time.h>
+
 int main()
 {
+	srand(time(0));
+
+	//随机产生一个数对100取于，可随机得到一个0-100之间的随机数，+1为了避免得到0
+	int number = rand()%100+1;
+	int count = 0;
 	int a = 0;
-	int b = 0;
-	int n = 0;
-	printf("请输入一个整数：");
-	scanf("%d", &a);
-	printf("您输入的整数是%d。\n", a);
-
-	n++;
-	b=a / 10;
-	while (b>0)
+	printf("我已经想好了一个1到100之间的数。");
+	do
 	{
-		n++;
-		b /= 10;
-	}
-	printf("这个整数是%d位数。\n", n);
+		printf("猜猜这个数是什么: ");
+		scanf(" %d", &a);
+		count++;
+		if (a > number)
+		{
+			printf("你猜的数字大了。");
+		}
+		else
+		{
+			if (a<number)
+			{
+				printf("你猜的数字小了。");
+			}
+			
+		}
+	} while (a!=number);
 
+	printf("你用%d次猜到了正确数字。\n",count);
 
 	return 0;
 }
