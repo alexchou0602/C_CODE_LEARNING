@@ -205,23 +205,83 @@
 //	return 0;
 //}
 
+
+////算数平均数   do while后的条件为循环满足条件，不达到条件跳出循环
+//int main()
+//{
+//	int sum = 0;
+//	int count = 0;
+//	int num = 0;
+//
+//	do
+//	{
+//		scanf("%d", &num);
+//		if (num != -1)
+//		{
+//			sum += num;
+//			count++;
+//		}
+//	} while (num != -1);
+//	printf("%d %d", sum, count);
+//	
+//	return 0;
+//
+//}
+
+
+//倒序输出一个数字。while后的条件为执行循环满足条件
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	scanf("%d", &a);
+//
+//	while (a>0)
+//	{
+//		b = a % 10;
+//		printf("%d", b);
+//		a /=10;
+//	} 
+//	
+//
+//
+//	return 0;
+//}
+
+
+////计算一个数的阶乘
+//int main()
+//{
+//	int x = 0;
+//	int n = 1;
+//	int m = 1;
+//	scanf("%d", &x);
+//
+//	while (n <=x)
+//	{
+//		m *= n;
+//		n++;
+//	}
+//	printf("%d", m);
+//
+//
+//	return 0;
+//}
+
+//计算一个数的阶乘，使用for循环。括号中条件后需加“；”。
 int main()
 {
-	int sum = 0;
-	int count = 0;
-	int num = 0;
+	int x = 0;
+	int n = 1;
+	int m = 1;
+	scanf("%d", &x);
+	 for(m=1;n<=x;n++)
+	 {
+		 m *= n;
+	 }
+	 printf("%d", m);
 
-	do
-	{
-		scanf("%d", &num);
-		if (num != -1)
-		{
-			sum += num;
-			count++;
-		}
-	} while (num != -1);
-	printf("%d %d", sum, count);
-	
+
+
 	return 0;
-
 }
