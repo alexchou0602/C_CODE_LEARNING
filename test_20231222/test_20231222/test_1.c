@@ -172,35 +172,56 @@
 #include<stdlib.h>
 #include<time.h>
 
+//int main()
+//{
+//	srand(time(0));
+//
+//	//随机产生一个数对100取于，可随机得到一个0-100之间的随机数，+1为了避免得到0
+//	int number = rand()%100+1;
+//	int count = 0;
+//	int a = 0;
+//	printf("我已经想好了一个1到100之间的数。");
+//	do
+//	{
+//		printf("猜猜这个数是什么: ");
+//		scanf(" %d", &a);
+//		count++;
+//		if (a > number)
+//		{
+//			printf("你猜的数字大了。");
+//		}
+//		else
+//		{
+//			if (a<number)
+//			{
+//				printf("你猜的数字小了。");
+//			}
+//			
+//		}
+//	} while (a!=number);
+//
+//	printf("你用%d次猜到了正确数字。\n",count);
+//
+//	return 0;
+//}
+
 int main()
 {
-	srand(time(0));
-
-	//随机产生一个数对100取于，可随机得到一个0-100之间的随机数，+1为了避免得到0
-	int number = rand()%100+1;
+	int sum = 0;
 	int count = 0;
-	int a = 0;
-	printf("我已经想好了一个1到100之间的数。");
+	int num = 0;
+
 	do
 	{
-		printf("猜猜这个数是什么: ");
-		scanf(" %d", &a);
-		count++;
-		if (a > number)
+		scanf("%d", &num);
+		if (num != -1)
 		{
-			printf("你猜的数字大了。");
+			sum += num;
+			count++;
 		}
-		else
-		{
-			if (a<number)
-			{
-				printf("你猜的数字小了。");
-			}
-			
-		}
-	} while (a!=number);
-
-	printf("你用%d次猜到了正确数字。\n",count);
-
+	} while (num != -1);
+	printf("%d %d", sum, count);
+	
 	return 0;
+
 }
