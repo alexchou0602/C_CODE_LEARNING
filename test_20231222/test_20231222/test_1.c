@@ -268,20 +268,78 @@
 //	return 0;
 //}
 
-//计算一个数的阶乘，使用for循环。括号中条件后需加“；”。
-int main()
-{
-	int x = 0;
-	int n = 1;
-	int m = 1;
-	scanf("%d", &x);
-	 for(m=1;n<=x;n++)
-	 {
-		 m *= n;
-	 }
-	 printf("%d", m);
+////计算一个数的阶乘，使用for循环。括号中条件后需加“；”。
+//int main()
+//{
+//	int x = 0;
+//	int n = 1;
+//	int m = 1;
+//	scanf("%d", &x);
+//	 for(m=1;n<=x;n++)
+//	 {
+//		 m *= n;
+//	 }
+//	 printf("%d", m);
+//
+//
+//
+//	return 0;
+//}
 
 
 
-	return 0;
-}
+////判断素数  使用inPrime的值来判断真伪
+//int main()
+//{
+//	int x = 0;
+//	scanf("%d", &x);
+//
+//
+//	int n = 0;
+//	int isPrime = 1;
+//	for (n = 2; n < x; n++)
+//	{
+//		if (x % n == 0)
+//		{
+//			isPrime = 0;
+//			break;
+//		}
+//	}
+//
+//	if (isPrime == 1)
+//	{
+//		printf("是素数\n");
+//	}
+//	else
+//	{
+//		printf("不是素数\n");
+//	}
+//
+//	return 0;
+//}
+
+//输出100以内的素数
+
+//int main()
+//{
+//	int x = 0;
+//		for(x=2;x<=100;x++)
+//		{
+//			int n = 0;
+//				int isPrime = 1;
+//				for (n = 2; n < x; n++)
+//				{
+//					if (x % n == 0)
+//					{
+//						isPrime = 0;
+//						break;
+//					}
+//				}
+//				if (isPrime == 1)
+//				{
+//					printf("%d ",x);
+//				}
+//		}
+//
+//	return 0;
+//}
