@@ -381,31 +381,74 @@
 
 
 //正序输出一个整数的每一位(不完美)
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int c = 0;
+//	scanf("%d", &a);
+//	
+//	do 
+//	{
+//		b = a % 10;
+//		c = c * 10 + b;
+//		a/=10;
+//	} while (a > 0);
+//	//printf("%d\n", c);
+//
+//	int d = 0;
+//	int e = 0;
+//	do
+//	{
+//		d = c % 10;
+//		printf("%d ", d);
+//		c /= 10;
+//	} while (c>0);
+//
+//
+//
+//	return 0;
+//}
+
+//正序输出一个整数的每一位（完美）
 int main()
 {
-	int a = 0;
-	int b = 0;
-	int c = 0;
-	scanf("%d", &a);
-	
-	do 
-	{
-		b = a % 10;
-		c = c * 10 + b;
-		a/=10;
-	} while (a > 0);
-	//printf("%d\n", c);
+	int x = 0;
+	scanf("%d", &x);
+	int mask = 1;
+	int n = x;
 
-	int d = 0;
-	int e = 0;
+	while (n > 9)
+	{
+		n /= 10;
+		mask *= 10;
+		//printf("%d ", mask);
+	} 
+	//printf("%d", mask);
+
+
+	    //1234 / 1000->1
+		//1234 % 1000->234
+		//1000 / 10->100
+		//234 / 100->2
+		//234 % 100->34
+		//100 / 10->10
+		//34 / 10->3
+		//34 % 10->4
+		//10 / 10->1
+		//4 / 1->4
+		//4 % 1->0
+		//1 / 10->0
+
+
 	do
 	{
-		d = c % 10;
+		int d = x / mask;
 		printf("%d ", d);
-		c /= 10;
-	} while (c>0);
-
-
+		x %= mask;
+		mask /= 10;
+	} while (mask > 0);
+	
 
 	return 0;
 }
