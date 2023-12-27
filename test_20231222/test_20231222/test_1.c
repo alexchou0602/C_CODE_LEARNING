@@ -343,3 +343,69 @@
 //
 //	return 0;
 //}
+
+////计算f（n）函数，1至n的倒数的和，注意double的数据类型，输出数据类型使用"%f"
+//int main()
+//{
+//	int n = 0;
+//	int i = 0;
+//	double x = 0.0;
+//
+//	scanf("%d", &n);
+//	for (i = 1; i <= n; i++)
+//	{
+//		x += 1.0 / i;
+//	}
+//	printf("f(%d)=%f\n", n,x);
+//
+//	return 0;
+//}
+
+////f(n)函数，加减轮换，设置一个值sign，在每个循环使用sign=-sign，实现加减轮换,注意第一个是加还是减，调整sign初始值的正负
+//int main()
+//{
+//	int n = 0;
+//	int i = 0;
+//	double x = 0.0;
+//	int sign = 1;
+//	scanf("%d", &n);
+//	for (i = 1; i <= n; i++)
+//	{
+//		x += sign*1.0 / i;
+//		sign = -sign;
+//	}
+//	printf("f(%d)=%f\n", n,x);
+//
+//	return 0;
+//}
+
+
+//正序输出一个整数的每一位(不完美)
+int main()
+{
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	scanf("%d", &a);
+	
+	do 
+	{
+		b = a % 10;
+		c = c * 10 + b;
+		a/=10;
+	} while (a > 0);
+	//printf("%d\n", c);
+
+	int d = 0;
+	int e = 0;
+	do
+	{
+		d = c % 10;
+		printf("%d ", d);
+		c /= 10;
+	} while (c>0);
+
+
+
+	return 0;
+}
