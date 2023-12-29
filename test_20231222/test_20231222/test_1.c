@@ -411,20 +411,100 @@
 //}
 
 //正序输出一个整数的每一位（完美）
+//int main()
+//{
+//	int x = 0;
+//	scanf("%d", &x);
+//	int mask = 1;
+//	int n = x;
+//
+//	while (n > 9)
+//	{
+//		n /= 10;
+//		mask *= 10;
+//		//printf("%d ", mask);
+//	} 
+//	//printf("%d", mask);
+//
+//
+//	    //1234 / 1000->1
+//		//1234 % 1000->234
+//		//1000 / 10->100
+//		//234 / 100->2
+//		//234 % 100->34
+//		//100 / 10->10
+//		//34 / 10->3
+//		//34 % 10->4
+//		//10 / 10->1
+//		//4 / 1->4
+//		//4 % 1->0
+//		//1 / 10->0
+//
+//
+//	do
+//	{
+//		int d = x / mask;
+//		printf("%d ", d);
+//		x %= mask;
+//		mask /= 10;
+//	} while (mask > 0);
+//	
+//
+//	return 0;
+//}
+
+////函数的使用
+//void sum(int begin, int end)
+//{
+//	int i;
+//	int sum = 0;
+//	for (i = begin; i <= end; i++)
+//	{
+//		sum += i;
+//	}
+//	printf("%d到%d的和是%d\n", begin, end, sum);
+//}
+//
+//int main()
+//{
+//	sum(10, 20);
+//	sum(20, 30);
+//	sum(35, 45);
+//
+//	return 0;
+//}
+
+
+
+//正序输出一个整数的每一位（完美） 使用创建函数的方式，注意使用函数参数的传递，以及函数值的返回
+int res(int n, int mask)//函数中的变量名称跟函数外的变量名称虽然相同，但是不相互影响。
+{
+  while (n > 9)
+  {
+	n /= 10;
+	mask *= 10;
+  }
+
+  //printf("%d", mask);
+  return mask;//将函数的最终计算结果返回，将结果传递出来
+}
+
+
 int main()
 {
 	int x = 0;
-	scanf("%d", &x);
 	int mask = 1;
-	int n = x;
+	scanf("%d", &x);
+	
 
-	while (n > 9)
-	{
-		n /= 10;
-		mask *= 10;
-		//printf("%d ", mask);
-	} 
-	//printf("%d", mask);
+	mask=res(x, mask);//将函数计算结果赋值
+	//while (n > 9)
+	//{
+	//	n /= 10;
+	//	mask *= 10;
+	//	//printf("%d ", mask);
+	//} 
+	////printf("%d", mask);
 
 
 	    //1234 / 1000->1
