@@ -540,38 +540,75 @@ length是数组的长度
 如果找到，返回a在其中的位置
 如果找不到返回-1*/
 
-int search(int key, int a[], int length)
-{
-	int ret = -1;
-	int i;
-	for (i = 0; i < length; i++)//遍历数组，因为数组第一个数字序号为0，所以最后一个数字序号为length-1，i<length
-	{
-		if(a[i]==key)
-		{
-			ret = i;
-			break;
-		}
-	}
-	return ret;
-}
+//int search(int key, int a[], int length)
+//{
+//	int ret = -1;
+//	int i;
+//	for (i = 0; i < length; i++)//遍历数组，因为数组第一个数字序号为0，所以最后一个数字序号为length-1，i<length
+//	{
+//		if(a[i]==key)
+//		{
+//			ret = i;
+//			break;
+//		}
+//	}
+//	return ret;
+//}
+//
+//
+//
+//int main()
+//{
+//	int a[] = { 2,4,6,7,1,3,5,8,11,13,23,14,32 };//设定一个数组
+//	int x;
+//	int loc;
+//	printf("请输入一个数字：");
+//	scanf("%d", &x);  //输入一个目标数字
+//	loc = search(x, a, sizeof(a) / sizeof(a[0]));  //使用函数寻找数字在数组中的位置
+//	if(loc!=-1)
+//	{
+//		printf("%d在第%d个位置上\n", x, loc);
+//	}
+//	else
+//	{
+//		printf("%d不存在\n", x);
+//	}
+//	return 0;
+//}
 
+////&a表示变量a的地址，输出地址的类型是%p
+//int main(void)
+//{
+//	int a[10];
+//	printf("%p\n", &a);
+//	printf("%p\n", a);
+//	printf("%p\n", &a[0]);
+//	printf("%p\n", &a[1]);
+//
+//	return 0;
+//}
 
-
-int main()
-{
-	int a[] = { 2,4,6,7,1,3,5,8,11,13,23,14,32 };//设定一个数组
-	int x;
-	int loc;
-	printf("请输入一个数字：");
-	scanf("%d", &x);  //输入一个目标数字
-	loc = search(x, a, sizeof(a) / sizeof(a[0]));  //使用函数寻找数字在数组中的位置
-	if(loc!=-1)
-	{
-		printf("%d在第%d个位置上\n", x, loc);
-	}
-	else
-	{
-		printf("%d不存在\n", x);
-	}
-	return 0;
-}
+//void f(int* p);
+//void g(int k);
+//
+//int main(void)
+//{
+//	int i = 6;
+//	printf("&i=%p\n", &i);
+//	f(&i);
+//	g(i);
+//		return 0;
+//}
+//
+//
+//void f(int* p)
+//{
+//	printf("p=%p\n", p);
+//	printf("*p=%d\n", *p);
+//	*p = 26;
+//}
+//
+//void g(int k)
+//{
+//	printf("k=%d\n", k);
+//}
