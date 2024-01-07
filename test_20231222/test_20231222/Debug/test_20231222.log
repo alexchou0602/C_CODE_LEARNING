@@ -1,2 +1,4 @@
 ﻿  test_2.c
+D:\C学习\C_CODE_LEARNING\test_20231222\test_20231222\test_2.c(75,28): warning C4133: “-”: 从“int *”到“char *”的类型不兼容
+D:\C学习\C_CODE_LEARNING\test_20231222\test_20231222\test_2.c(71,1): warning C4133: “初始化”: 从“int *”到“char *”的类型不兼容
   test_20231222.vcxproj -> D:\C学习\C_CODE_LEARNING\test_20231222\Debug\test_20231222.exe
