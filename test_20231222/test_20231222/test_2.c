@@ -57,21 +57,34 @@
 //
 
 
-//指针加1，指的是加上一个该指针所指变量类型的大小。
-int main(void)
+////指针加1，指的是加上一个该指针所指变量类型的大小。
+//int main(void)
+//{
+//	char ac[] = { 0,1,2,3,4,5,6,7,8,9 };
+//	char* p = &ac[0];
+//	char* p1 = &ac[5];
+//	printf("p=%p\n", p);
+//	printf("p+1=%p\n", p + 1);
+//	printf("p1-p=%d\n", p1 - p);
+//	int ai[] = { 0,1,2,3,4,5,6,7,8,9 };
+//	int* q = &ai[0];
+//	char* q1 = &ai[5];
+//	printf("q=%p\n", q);
+//	printf("q+1=%p\n", q+1);
+//	printf("q1=%p\n", q1);
+//	printf("q1-q=%d\n", q1 - q);
+//	return 0;
+//}
+#include <string.h>
+	 
+//main函数的括号中是有参数的，第一个参数为整形参数argc，第二个参数为一个二维数组，argc显示数组第一维度的个数。
+//argv的第一个参数argv[0]是本程序的名字，
+int main(int argc, char const* argv[])
 {
-	char ac[] = { 0,1,2,3,4,5,6,7,8,9 };
-	char* p = &ac[0];
-	char* p1 = &ac[5];
-	printf("p=%p\n", p);
-	printf("p+1=%p\n", p + 1);
-	printf("p1-p=%d\n", p1 - p);
-	int ai[] = { 0,1,2,3,4,5,6,7,8,9 };
-	int* q = &ai[0];
-	char* q1 = &ai[5];
-	printf("q=%p\n", q);
-	printf("q+1=%p\n", q+1);
-	printf("q1=%p\n", q1);
-	printf("q1-q=%d\n", q1 - q);
+	int i;
+	for (i = 0; i < argc; i++)
+	{
+		printf("%d=%s\n", i, argv[i]);
+	}
 	return 0;
 }
