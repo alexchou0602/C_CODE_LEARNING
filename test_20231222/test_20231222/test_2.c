@@ -79,12 +79,48 @@
 	 
 //main函数的括号中是有参数的，第一个参数为整形参数argc，第二个参数为一个二维数组，argc显示数组第一维度的个数。
 //argv的第一个参数argv[0]是本程序的名字，
+//int main(int argc, char const* argv[])
+//{
+//	int i;
+//	for (i = 0; i < argc; i++)
+//	{
+//		printf("%d=%s\n", i, argv[i]);
+//	}
+//	return 0;
+//}
+
+
+//下面这段完全没搞懂！！！！！  strcpy函数的作用是将一个字符串数组复制到另一个字符串数组中，函数的第一个参数是目的，第二个参数是源。
+//char* mycpy(char* dst, const char* src)
+//{
+//	int idx = 0;
+//	while (src[idx]!='\0')
+//	{
+//		dst[idx] = src[idx];
+//		idx++;
+//	}
+//	dst[idx] = '\0';
+//	return dst
+//	//以下为指针版本的代码
+//	char* ret = dst;
+//	while(*dst++=*src++)
+//	{ }
+//	*dst = '\0';
+//
+//
+//	return ret；
+//}
+
 int main(int argc, char const* argv[])
 {
-	int i;
-	for (i = 0; i < argc; i++)
-	{
-		printf("%d=%s\n", i, argv[i]);
-	}
+	char s1[] = "abc";
+	char s2[] = "efg";
+	strcpy(s1, s2);
+
+
+	printf("%s\n", &s1);
+	
+	
+
 	return 0;
 }
