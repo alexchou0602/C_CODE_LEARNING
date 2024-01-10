@@ -110,17 +110,45 @@
 //
 //	return ret；
 //}
+//
+//int main(int argc, char const* argv[])
+//{
+//	char s1[] = "abc";
+//	char s2[] = "efg";
+//	strcpy(s1, s2);
+//
+//
+//	printf("%s\n", &s1);
+//	
+//	
+//
+//	return 0;
+//}
+
+
+struct date     //声明结构类型
+{
+	int month;
+	int day;
+	int year;
+};             //不要忘记声明结构后面需要带分号
 
 int main(int argc, char const* argv[])
 {
-	char s1[] = "abc";
-	char s2[] = "efg";
-	strcpy(s1, s2);
+	struct date today;  //定义结构变量
 
+	today.month = 01;
+	today.day = 10;
+	today.year = 2024;
 
-	printf("%s\n", &s1);
+	printf("Today's date is %i-%i-%i.\n",
+		today.year, today.month, today.day);
+
+	struct date day;
+	day = today;
 	
-	
+	printf("Today's date is %i-%i-%i.\n",
+		day.year, day.month, day.day);
 
 	return 0;
 }
