@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<stdbool.h>
+#include<string.h>
 
 //交换两个变量的值
 //void swap(int* pa, int* pb);
@@ -75,7 +77,6 @@
 //	printf("q1-q=%d\n", q1 - q);
 //	return 0;
 //}
-#include <string.h>
 	 
 //main函数的括号中是有参数的，第一个参数为整形参数argc，第二个参数为一个二维数组，argc显示数组第一维度的个数。
 //argv的第一个参数argv[0]是本程序的名字，
@@ -125,30 +126,117 @@
 //	return 0;
 //}
 
+//
+//struct date     //声明结构类型
+//{
+//	int month;
+//	int day;
+//	int year;
+//};             //不要忘记声明结构后面需要带分号
+//
+//int main(int argc, char const* argv[])
+//{
+//	struct date today;  //定义结构变量
+//
+//	today.month = 01;
+//	today.day = 10;
+//	today.year = 2024;
+//
+//	printf("Today's date is %i-%i-%i.\n",
+//		today.year, today.month, today.day);
+//
+//	struct date day;
+//	day = today;
+//	
+//	printf("Today's date is %i-%i-%i.\n",
+//		day.year, day.month, day.day);
+//
+//	return 0;
+//}
 
-struct date     //声明结构类型
+struct date
 {
 	int month;
 	int day;
 	int year;
-};             //不要忘记声明结构后面需要带分号
+};
 
-int main(int argc, char const* argv[])
+bool isLeap(struct date d);
+int numberofDays(struct date d);
+
+int main()
 {
-	struct date today;  //定义结构变量
+	struct date today, tomorrow;
 
-	today.month = 01;
-	today.day = 10;
-	today.year = 2024;
+	printf("Enter today's date (yyyy mm dd):");
+	scanf("%i %i %i", &today.year, &today.month, &today.day);
 
-	printf("Today's date is %i-%i-%i.\n",
-		today.year, today.month, today.day);
+	if (today.day != numberofDays(today))
+	{
+		tomorrow.day = today.day + 1;
+		tomorrow.month = today.month;
+		tomorrow.year = today.year;
+	}
+	else if (today.month == 12)
+	{
+		tomorrow.day = 1;
+		tomorrow.month = 1;
+		tomorrow.year = today.year + 1;
+	}
+	else
+	{
+		tomorrow.day = 1;
+		tomorrow.month = today.month + 1;
+		tomorrow.year = today.year;
+	}
 
-	struct date day;
-	day = today;
-	
-	printf("Today's date is %i-%i-%i.\n",
-		day.year, day.month, day.day);
+	printf("Tomorrow's date is %i-%i-%i.\n",
+		tomorrow.year, tomorrow.month, tomorrow.day);
+
 
 	return 0;
 }
+
+bool isLeap(struct date d)
+{
+	bool leap = false;
+	if ((d.year % 4 == 0 && d.year % 100!= 0) || d.year % 400 == 0)
+		leap = true;
+
+	return leap;
+}
+
+
+int numberofDays(struct date d)
+{
+	int days;
+	const int daysPerMonth[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+	if (d.month == 2 && isLeap(d))
+		days = 29;
+	else
+		days = daysPerMonth[d.month - 1];
+
+	return days;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
